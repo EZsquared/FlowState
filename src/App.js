@@ -7,6 +7,7 @@ import Playlist from './Components/Playlist/Playlist.js';
 function App() {
   return (
     <div className="App">
+      <div className="logo-top">Flow<span>State</span></div>
       <div className="page-container">
         <Player/>
         <Playlist/>

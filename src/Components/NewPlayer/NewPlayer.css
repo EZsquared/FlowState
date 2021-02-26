@@ -43,13 +43,17 @@ body {
   width: 100%;
   font-size: 3.5vh;
   padding: .2vh;
+  letter-spacing: .75vw;
 }
 .Player .Artist {
   margin-top: .4vh;
   font-size: 1.9vh;
+  letter-spacing: .5vw;
 }
 .Player .Album {
+  margin-top: .4vh;
   font-size: 1.7vh;
+  letter-spacing: .25vw;
 
 }
 .Player .Timestamps {
