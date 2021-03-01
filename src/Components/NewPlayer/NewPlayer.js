@@ -34,13 +34,11 @@ function NewPlayer() {
     return (
             <div className="Player lcd-panel">
                 <div className="info-header">
-                    <div className="noti-cent-item others">i</div>
-                    <div className="noti-cent-item others">i</div>
-                    <div className="noti-cent-item others">i</div>
+                    <div className="noti-cent-item others icon-cog2"></div>
+                    <div className="noti-cent-item others icon-folder2"></div>
+                    <div className="noti-cent-item others icon-moon"></div>
                     <div className="noti-cent-item">O</div>
-                    <div className="noti-cent-item others">i</div>
-                    <div className="noti-cent-item others">i</div>
-                    <div className="noti-cent-item others">i</div> 
+                    <div className="noti-cent-item others icon-speech-bubble"></div>
                 </div>
                 <div>
                     <div className="action">Now playing</div>
@@ -72,7 +70,7 @@ function NewPlayer() {
                         <div  className="Button icon-skip-forward others"></div>
                         <div className="others"></div>
                         <div  className="others"></div>
-                        <div  className="others"></div>
+                        <div  className="Button icon-fire2 others Option" id="heart" onClick={() =>{handleOption('heart')}}></div>
                     </div>
                 </div>
                 <div className="Scrubber">

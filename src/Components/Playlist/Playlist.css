@@ -1,4 +1,6 @@
 .playlist-container {
     display: grid;
+    font-size: 6vh;
+    padding: 2vh;
     
 }
