@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Player from './Components/NewPlayer/NewPlayer.js';
+import FullPlayer from './Components/FullPlayer/FullPlayer.js';
 import './Components/fonts/icomoon.css';
 import Playlist from './Components/Playlist/Playlist.js';
 

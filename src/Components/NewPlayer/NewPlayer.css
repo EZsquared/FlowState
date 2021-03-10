@@ -12,9 +12,10 @@ body {
 }
 .timebar {
   display: grid;
-  flex-direction: row;
+  grid-template-columns: .5fr 2fr .5fr;
+  text-align: center;
   align-items: center;
-
+  font-size: 2vh;
 }
 .controls-wrap {
   background: black;
@@ -27,15 +28,16 @@ body {
 .Player {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: .7fr 1.5fr .8fr .8fr .3fr;
+  /* grid-template-rows: .7fr 1.5fr .8fr .8fr .3fr; */
   overflow: hidden;
   padding: 1vw;
+  row-gap: .5vh;
 }
 .Player .action {
   letter-spacing: .5vw;
   font-weight: bold;
   width: 50%;
-  margin-bottom: 1vh;
+  /* margin-bottom: .5vh; */
   margin-top: .8vh;
 }
 .Player .Name {
@@ -102,4 +104,28 @@ body {
 }
 .noti-cent-items{
   border: 1px solid black;
+}
+
+
+
+input[type=range]{
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: rgb(2, 1, 1);
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: goldenrod;
+  margin-top: -6px;
 }

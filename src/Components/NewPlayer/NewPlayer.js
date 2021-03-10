@@ -38,8 +38,8 @@ class NewPlayer extends React.Component{
         super(props)
     
         this.state = {
-          status: 'ready',
           source: song,
+          status: 'loading',
           playing: false,
           loaded: false,
           loop: false,
@@ -67,14 +67,15 @@ class NewPlayer extends React.Component{
     
       handleToggle () {
         this.setState({
-          playing: !this.state.playing
+          playing: !this.state.playing,
         })
       }
     
       handleOnLoad () {
         this.setState({
           loaded: true,
-          duration: this.player.duration()
+          duration: this.player.duration(),
+          status: 'ready'
         })
       }
     
@@ -159,7 +160,7 @@ class NewPlayer extends React.Component{
                 </div>
                 <div>
                     <div className="action">{
-                    (this.state.loaded) ? this.state.status : 'Loading'
+                    (this.state.playing) ? 'Now Playing' : this.state.status
                     }</div>
                     <div className="TrackInformation">
                         <div className="Name">Awesome Song</div>      
