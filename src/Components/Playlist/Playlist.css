@@ -4,3 +4,32 @@
     padding: 2vh;
     
 }
+.list-info-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5vh;
+}
+
+.track-info-container {
+    display: grid;
+    grid-template-columns: .2fr .2fr 1fr 1fr .2fr;
+    height: 1.5vw;
+    align-items: center;
+    font-size: 2.5vh;
+}
+.track-play {
+    font-size: 2vw;
+}
+
+.track-artist {
+    font-size: 1.8vh;
+}
+.playlist-header-container {
+    display: grid;
+    grid-template-columns: .2fr .2fr 1fr 1fr .2fr;
+    padding-top: 2vh;
+    align-items: center;
+    font-size: 1.5vh;
+    font-style: italic;
+    height: 1.5vh;
+}

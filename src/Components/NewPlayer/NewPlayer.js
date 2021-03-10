@@ -16,20 +16,18 @@ function handleOption (opId) {
 
 function handlePlay (opId) {
     const option = document.getElementById(opId);
-    console.log(option.value);
     if (option.value === true) {
-      option.classList.remove('On');
+      option.classList.remove('icon-play4');
+      option.classList.add('icon-pause3');
       option.value = false;
       } else {
-        option.classList.add('On');
+        option.classList.remove('icon-pause3');
+        option.classList.add('icon-play4');
         option.value = true;
       }
-      console.log(option.value);
 }
   
-
 function NewPlayer() {
-
 
     return (
             <div className="Player lcd-panel">
@@ -65,12 +63,12 @@ function NewPlayer() {
                         <div  className="others"></div>
                         <div className="Button icon-skip-back others"></div>
                         <div  className="Button icon-rewind others"></div>
-                        <div className="Button icon-play4"></div>
+                        <div className="Button icon-play4" id='play' onClick={() =>{handlePlay('play')}}></div>
                         <div  className="Button icon-fast-forward others"></div>
                         <div  className="Button icon-skip-forward others"></div>
                         <div className="others"></div>
                         <div  className="others"></div>
-                        <div  className="Button icon-fire2 others Option" id="heart" onClick={() =>{handleOption('heart')}}></div>
+                        <div  className="Button icon-heart others Option" id="heart" onClick={() =>{handleOption('heart')}}></div>
                     </div>
                 </div>
                 <div className="Scrubber">

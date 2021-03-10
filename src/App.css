@@ -68,7 +68,7 @@ body {
   border-radius: 5px;
 }
 .info-header {
-  font-size: 3.5vh;
+  font-size: 2vw;
   font-weight: bold;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
