@@ -36,7 +36,7 @@ body {
 .page-container {
   display: grid;
   grid-template-columns:repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   padding: 1vw;
   gap: 1vw;
 
@@ -108,7 +108,10 @@ body {
   border-radius: 5px;
   font-family: Electronic Highway Sign;
   background: rgb(255, 151, 23);
-  border: 3px solid rgb(94, 92, 92);
+  border-bottom: 7px solid rgb(94, 92, 92);
+  border-top: 20px solid rgb(94, 92, 92);
+  border-left: 5px solid rgb(94, 92, 92);
+  border-right: 5px solid rgb(94, 92, 92);
   box-shadow: 1px 1px 5px black,
               0px -1px 2px rgb(255, 254, 254),
               inset 0px 0px 10px black,

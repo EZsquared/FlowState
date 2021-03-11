@@ -38,8 +38,8 @@ class NewPlayer extends React.Component{
         super(props)
     
         this.state = {
-          source: song,
-          status: 'loading',
+          source: [song, ],
+          status: '',
           playing: false,
           loaded: false,
           loop: false,
@@ -64,7 +64,12 @@ class NewPlayer extends React.Component{
       componentWillUnmount () {
         this.clearRAF()
       }
-    
+      componentDidMount () {
+        (this.state.source) ? this.setState({status: 'loading'}) :
+        this.setState({
+          status: 'No Media'
+        })
+      }
       handleToggle () {
         this.setState({
           playing: !this.state.playing,
@@ -74,7 +79,7 @@ class NewPlayer extends React.Component{
       handleOnLoad () {
         this.setState({
           loaded: true,
-          duration: this.player.duration(),
+          duration: this.player.duration() - this.state.seek,
           status: 'ready'
         })
       }
@@ -96,7 +101,7 @@ class NewPlayer extends React.Component{
       handleStop () {
         this.player.stop()
         this.setState({
-          playing: false // Need to update our local state so we don't immediately invoke autoplay
+          playing: false
         })
         this.renderSeekPos()
       }
@@ -130,13 +135,14 @@ class NewPlayer extends React.Component{
       handleSeekingChange (e) {
         this.setState({
           seek: parseFloat(e.target.value)
-        })
+        });
       }
     
       renderSeekPos () {
         if (!this.state.isSeeking) {
           this.setState({
-            seek: this.player.seek()
+            seek: this.player.seek(),
+            duration: this.player.duration() - this.state.seek,
           })
         }
         if (this.state.playing) {
@@ -172,7 +178,7 @@ class NewPlayer extends React.Component{
                       <div className="Artist">Various Artists</div>
                       <div className="Album">Totally Cool Album</div>
                   </div>
-                  {(this.state.duration) ? ((this.state.duration / 60) - (this.state.seek / 60)).toFixed(2) : ''}
+                  {(this.state.duration) ? (this.state.duration / 60).toFixed(2) : '0.00'}
                 </div>
                 <div className="controls-wrapper">
                     <div className="Controls">

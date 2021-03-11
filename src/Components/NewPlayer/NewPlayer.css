@@ -15,12 +15,14 @@ body {
   grid-template-columns: .5fr 2fr .5fr;
   text-align: center;
   align-items: center;
-  font-size: 2vh;
+  font-size: 4.2vh;
+  color:rgba(0, 0, 0, 0);
 }
 .controls-wrap {
   background: black;
 }
 .artist-album {
+  color: black;
   display: grid;
   grid-template-rows: 1fr 1fr;
   text-align: center;
@@ -28,7 +30,6 @@ body {
 .Player {
   display: grid;
   grid-template-columns: 1fr;
-  /* grid-template-rows: .7fr 1.5fr .8fr .8fr .3fr; */
   overflow: hidden;
   padding: 1vw;
   row-gap: .5vh;
@@ -36,16 +37,19 @@ body {
 .Player .action {
   letter-spacing: .5vw;
   font-weight: bold;
-  width: 50%;
-  /* margin-bottom: .5vh; */
+  font-size: 2vh;
   margin-top: .8vh;
+  color:rgba(0, 0, 0, 0);
 }
 .Player .Name {
+  display: grid;
   text-align: center;
+  align-content: center;
   width: 100%;
   font-size: 3.5vh;
   padding: .7vh;
   letter-spacing: .75vw;
+  margin-top: 0;
 }
 .Player .Artist {
   margin-top: .4vh;
@@ -58,25 +62,14 @@ body {
   letter-spacing: .25vw;
 
 }
-.Player .Timestamps {
-  display: flex;
-  justify-content: space-between;
-  z-index: 2;
-  width: 100%;
-  margin-top: -5vh;
-}
-.Player .Timestamps .Time {
-  font-family: Remaster;
-  font-size: 3vh;
-}
 .Player .Controls {
   margin-top: .5vh;
   display: grid;
   grid-template-columns: repeat(11, 1fr);
 }
 .Player .Controls .Button {
-  font-size: 2.5vh;
-  height: 4vh;
+  font-size: 4vh;
+  height: 5vh;
   width: 4vw;
   border: 2px solid rgb(2, 2, 2);
   box-sizing: border-box;
@@ -106,8 +99,6 @@ body {
   border: 1px solid black;
 }
 
-
-
 input[type=range]{
   -webkit-appearance: none;
 }
@@ -122,10 +113,16 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: none;
+  border: 1px solid black;
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: goldenrod;
-  margin-top: -6px;
+  background: rgb(218, 32, 32);
+  box-shadow: 1px 1px 1px black,
+              1px 1px 8px rgba(0, 0, 0, 0.685),
+              inset 0px 1px 2px rgba(255, 255, 255, 0.575);
+  margin-top: -1%;
+}
+input[type=range]::focus{
+  outline: none;
 }
